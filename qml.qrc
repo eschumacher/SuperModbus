@@ -4,5 +4,11 @@
         <file>Page1.qml</file>
         <file>Page1Form.ui.qml</file>
         <file>Connections.qml</file>
+        <file>MBDevice.qml</file>
+        <file>DeviceType.qml</file>
+        <file>DeviceBody.qml</file>
+        <file>RTUDefinition.qml</file>
+        <file>Results.qml</file>
+        <file>DeviceFooter.qml</file>
     </qresource>
 </RCC>

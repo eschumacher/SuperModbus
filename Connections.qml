@@ -4,13 +4,16 @@ import QtQuick.Layouts 1.0
 
 Item {
     anchors.fill: parent
+    Layout.fillHeight: true
+    Layout.fillWidth: true
 
     GridLayout {
         id: gridLayoutConnections
-        parent: gridOuter
-        rows: 8
+        rows: 7
         flow: GridLayout.TopToBottom
         anchors.fill: parent
+        Layout.fillHeight: true
+        Layout.fillWidth: true
 
         TableView {
             id: tableViewConnections
@@ -18,6 +21,7 @@ Item {
             Layout.fillHeight: true
             Layout.fillWidth: true
             Layout.rowSpan: 5
+            Layout.topMargin: 8
 
             TableViewColumn { title: "Name" }
             TableViewColumn { title: "Type" }
@@ -28,7 +32,7 @@ Item {
         Label {
             text: "Connection Traffic"
             horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
+            verticalAlignment: Text.AlignBottom
             Layout.columnSpan: 2
             Layout.fillHeight: true
             Layout.fillWidth: true
@@ -37,8 +41,7 @@ Item {
 
         TextArea {
             id: textAreaConnTraffic
-            text: "This widget spans over three rows in the GridLayout.\n"
-                + "All items in the GridLayout are implicitly positioned from top to bottom."
+            text: "THIS IS MY TEST TEXT!"
             Layout.columnSpan: 2
             Layout.fillHeight: true
             Layout.fillWidth: true
@@ -46,20 +49,12 @@ Item {
         }
 
         Button {
-            id: btnSaveConnTraffic
-            text: "Save Text"
-            Layout.alignment: Qt.AlignCenter
+            text: "New"
+            Layout.topMargin: 8
         }
-
-        Button { text: "New" }
         Button { text: "Edit" }
         Button { text: "Connect" }
         Button { text: "Disconnect" }
         Button { text: "Delete" }
-
-        Button {
-            text: "Clear Text"
-            Layout.leftMargin: -442
-        }
     }
 }

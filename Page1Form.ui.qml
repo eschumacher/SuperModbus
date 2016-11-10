@@ -6,23 +6,25 @@ import QtQuick.Controls 1.4
 Item {
     width: 1024
     height: 800
+    property alias btnAddModbusDevice: btnAddModbusDevice
+    property alias tabViewMain : tabViewMain
 
     Button {
-        id: btnAddConnection
+        id: btnAddModbusDevice
         x: 8
         y: 24
         width: 110
         height: 40
-        text: qsTr("Add Connection")
+        text: qsTr("Add Device")
     }
 
     Button {
-        id: button1
+        id: btnRemoveModbusDevice
         x: 128
         y: 24
         width: 110
         height: 40
-        text: qsTr("Add Modbus Device")
+        text: qsTr("Remove Device")
     }
 
     Button {
@@ -60,7 +62,7 @@ Item {
     }
 
     TabView {
-        id: tabView1
+        id: tabViewMain
         x: 8
         y: 77
         width: 1008
